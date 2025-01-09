@@ -14,10 +14,21 @@ environment:
   flutter: '>=3.3.0'
 
 dependencies:
-  firebase_auth_platform_interface: ^7.1.8
-  firebase_auth_web: ^5.9.8
-  firebase_core: ^2.27.0
-  firebase_core_platform_interface: ^5.0.0
+  firebase_auth_platform_interface:
+    git:
+      url: https://github.com/guide-inc-org/guide-flutter_fire.git
+      ref: kcfx/v2.27.0+1
+      path: packages/firebase_auth/firebase_auth_platform_interface
+  firebase_core:
+    git:
+      url: https://github.com/guide-inc-org/guide-flutter_fire.git
+      ref: kcfx/v2.27.0+1
+      path: packages/firebase_core/firebase_core
+  firebase_core_platform_interface:
+    git:
+      url: https://github.com/guide-inc-org/guide-flutter_fire.git
+      ref: kcfx/v2.27.0+1
+      path: packages/firebase_core/firebase_core_platform_interface
   flutter:
     sdk: flutter
   meta: ^1.8.0
@@ -39,8 +50,6 @@ flutter:
         pluginClass: FLTFirebaseAuthPlugin
       macos:
         pluginClass: FLTFirebaseAuthPlugin
-      web:
-        default_package: firebase_auth_web
       windows:
         pluginClass: FirebaseAuthPluginCApi
 

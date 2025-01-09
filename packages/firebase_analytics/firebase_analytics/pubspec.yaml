@@ -14,10 +14,21 @@ environment:
   flutter: '>=3.3.0'
 
 dependencies:
-  firebase_analytics_platform_interface: ^3.9.9
-  firebase_analytics_web: ^0.5.5+21
-  firebase_core: ^2.27.0
-  firebase_core_platform_interface: ^5.0.0
+  firebase_analytics_platform_interface:
+    git:
+      url: https://github.com/guide-inc-org/guide-flutter_fire.git
+      ref: kcfx/v2.27.0+1
+      path: packages/firebase_analytics/firebase_analytics_platform_interface
+  firebase_core:
+    git:
+      url: https://github.com/guide-inc-org/guide-flutter_fire.git
+      ref: kcfx/v2.27.0+1
+      path: packages/firebase_core/firebase_core
+  firebase_core_platform_interface:
+    git:
+      url: https://github.com/guide-inc-org/guide-flutter_fire.git
+      ref: kcfx/v2.27.0+1
+      path: packages/firebase_core/firebase_core_platform_interface
   flutter:
     sdk: flutter
 
@@ -35,5 +46,3 @@ flutter:
         pluginClass: FLTFirebaseAnalyticsPlugin
       macos:
         pluginClass: FLTFirebaseAnalyticsPlugin
-      web:
-        default_package: firebase_analytics_web
